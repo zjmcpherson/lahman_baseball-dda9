@@ -1,6 +1,7 @@
 --Question #4:
 
-SELECT CASE 
+SELECT yearid,
+		CASE 
            WHEN POS = 'OF' THEN 'Outfield'
     	   WHEN POS IN ('SS', '1B', '2B', '3B') THEN 'Infield'
     	   WHEN POS IN ('P', 'C') THEN 'Battery' 
@@ -8,4 +9,4 @@ SELECT CASE
 	SUM(PO) AS total_putouts
 FROM fielding
 WHERE yearID = 2016
-GROUP BY position_group;
+GROUP BY position_group, yearid;
