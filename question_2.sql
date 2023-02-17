@@ -1,6 +1,6 @@
 -- 2. Find the name and height of the shortest player in the database. How many games did he play in? What is the name of the team for which he played?
 
-
+-- needed to join on playerid as well in second join to give accurate team name
 SELECT namefirst, namelast, g_all AS games_played, teams.name,
 		MIN(height) AS height_inches
 FROM people AS p INNER JOIN appearances AS a USING(playerid)
